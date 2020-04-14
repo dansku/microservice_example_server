@@ -1,7 +1,7 @@
 
 ## Microservice example project Server
 
-[![Lint Status](https://github.com/dansku/microservice_example_client/workflows/golangci-lint/badge.svg)](https://github.com/dansku/microservice_example_client/actions) [![Test Status](https://github.com/dansku/microservice_example_client/workflows/code-test/badge.svg)](https://github.com/dansku/microservice_example_client/actions)
+[![Lint Status](https://github.com/dansku/microservice_example_server/workflows/golangci-lint/badge.svg)](https://github.com/dansku/microservice_example_server/actions) [![Test Status](https://github.com/dansku/microservice_example_server/workflows/code-test/badge.svg)](https://github.com/dansku/microservice_example_server/actions)
 
 
 ### Build docker container
