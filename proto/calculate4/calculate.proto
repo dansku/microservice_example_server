@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calculate;
+
+service Calculate {
+    rpc Do(Request) returns (Response) {}
+}
+
+message Request {
+    repeated float numbers = 1;
+    string operation = 2;
+}
+
+message Response {
+    float number = 1;
+}
