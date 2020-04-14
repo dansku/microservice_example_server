@@ -7,7 +7,7 @@ import (
 	"os"
 	"log"
 
-	pb "github.com/dansku/mserv/srv/proto/calculate4"
+	pb "github.com/dansku/microservice_example_server/proto/calculate5"
 	"github.com/joho/godotenv"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
