@@ -62,7 +62,7 @@ func (s *server) Do(c context.Context, request *pb.Request) (response *pb.Respon
 	log.Printf("Performing %s \n", operation)
 	log.Printf("Requested Values: %v \n", request.Numbers)
 
-	var total float32 = 0
+	var total float32
 	total = CalculateValues(request.Numbers, operation)
 
 	response = &pb.Response{

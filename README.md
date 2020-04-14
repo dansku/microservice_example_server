@@ -9,7 +9,7 @@
 * Run container `docker run -d -p 5300:5300 srv`
 
 ### Notes
-* *Generate protobuf file: `protoc -I. --go_out=plugins=grpc:. calculate.proto`
+* Generate protobuf file: `protoc -I. --go_out=plugins=grpc:. calculate.proto`
 
 # CI/CD Pipelines
 The CI/CD pipelines are built using Github Actions Workflow. This is just a sample project, with a lot more to add in the future.
