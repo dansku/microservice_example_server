@@ -45,11 +45,6 @@ func main() {
 		grpclog.Fatalf("failed to listen: %v", err)
 	}
 
-
-	if err != nil {
-		grpclog.Fatalf("failed to listen: %v", err)
-	}
-
 }
 
 type server struct{}
