@@ -3,14 +3,12 @@
 
 [![Lint Status](https://github.com/dansku/microservice_example_server/workflows/golangci-lint/badge.svg)](https://github.com/dansku/microservice_example_server/actions) [![Test Status](https://github.com/dansku/microservice_example_server/workflows/code-test/badge.svg)](https://github.com/dansku/microservice_example_server/actions)
 
+This is a sample project to build a Golang server that communicates via gRPC and takes an array of numbers and a math operation and returns the result.
+Operations possible are `sum`, `subtract`, `multiply`, and `divide`.
 
-### Build docker container
-* From the `srv` folder, build container with `docker build . -t srv`
-* Run container `docker run -d -p 5300:5300 srv`
-* 
+### Running this from a docker container
+* Build: `docker build . -t srv`
+* Run: `docker run -d -p 5300:5300 srv`
 
 ### Notes
-* Generate protobuf file: `protoc -I. --go_out=plugins=grpc:. calculate.proto`
-
-# CI/CD Pipelines
-The CI/CD pipelines are built using Github Actions Workflow. This is just a sample project, with a lot more to add in the future.
+* Generate gRPC protobuf file: `protoc -I. --go_out=plugins=grpc:. calculate.proto`
