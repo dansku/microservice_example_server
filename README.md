@@ -7,6 +7,7 @@
 ### Build docker container
 * From the `srv` folder, build container with `docker build . -t srv`
 * Run container `docker run -d -p 5300:5300 srv`
+* 
 
 ### Notes
 * Generate protobuf file: `protoc -I. --go_out=plugins=grpc:. calculate.proto`

@@ -39,7 +39,16 @@ func main() {
 	grpcServer := grpc.NewServer(opts...)
 
 	pb.RegisterCalculateServer(grpcServer, &server{})
-	grpcServer.Serve(listener)
+	err = grpcServer.Serve(listener)
+	
+	if err != nil {
+		grpclog.Fatalf("failed to listen: %v", err)
+	}
+
+
+	if err != nil {
+		grpclog.Fatalf("failed to listen: %v", err)
+	}
 
 }
 
@@ -62,8 +71,7 @@ func (s *server) Do(c context.Context, request *pb.Request) (response *pb.Respon
 	log.Printf("Performing %s \n", operation)
 	log.Printf("Requested Values: %v \n", request.Numbers)
 
-	var total float32
-	total = CalculateValues(request.Numbers, operation)
+	total := CalculateValues(request.Numbers, operation)
 
 	response = &pb.Response{
 		Number: total,
