@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: math-server
+  labels:
+    app: go
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: 
+  template:
+    metadata:
+      labels:
+        app: go
+    spec:
+      containers:
+      - name: go
+        image: dansku/microservice_example_server
+        ports:
+        - containerPort: 5300
